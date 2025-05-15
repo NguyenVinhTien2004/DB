@@ -22,10 +22,10 @@ slow_selling_products = [
     "Cà phê hoà tan pha lạnh 3in1 vị nguyên bản UCC hộp 250g (10 gói x 25g) (1 Hộp)"
 ]
 
-# --- Load Excel file
-uploaded_file = st.file_uploader("📂 Tải lên file Excel", type=["xlsx"])
+# --- Load CSV file
+uploaded_file = st.file_uploader("📂 Tải lên file CSV", type=["xlsx"])
 if uploaded_file:
-    df = pd.read_excel(uploaded_file, sheet_name="Trang tính1")
+    df = pd.read_CSV(uploaded_file, sheet_name="Trang tính1")
     df = df[df["name"].isin(slow_selling_products)].copy()
 
     # --- Helper functions
