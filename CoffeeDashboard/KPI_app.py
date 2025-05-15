@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 st.title("📊 KPI Dashboard Doanh Số Cà Phê")
 
 # Đọc dữ liệu từ file Excel
-df = pd.read_excel("kf_coffee (1).xlsx", sheet_name="Trang tính1")
+df = pd.read_excel("kf_coffee.csv", sheet_name="Trang tính1")
 
 # Hàm tính số lượng bán trong khoảng ngày
 def sum_stock_decreased_in_range(stock_history_str, start_date, end_date):
